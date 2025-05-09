@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    margin: 10px 0;
+  }
+  
+  label, input, button {
+    margin: 5px;
+  }
+  
+  input {
+    padding: 5px;
+    width: 180px;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }
+  
+  #generatorSection,
+  #usersSection,
+  #sharePublicKeySection,
+  #shareKeySection {
+    display: none;
+    margin-top: 15px;
+  }
+  
+  #usersSection,
+  #sharedPublicKeysSection,
+  #sharedSecretKeysSection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .box {
+    border: 1px solid #aaa;
+    padding: 10px;
+    width: 200px;
+  }
+  

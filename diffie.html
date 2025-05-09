@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diffie-Hellman Key Exchange</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Diffie-Hellman Key Exchange</h2>
+  <label for="prime">Enter a Prime Number (p):</label>
+  <input type="number" id="prime" placeholder="Enter prime number" />
+  <button onclick="checkPrime()">Check</button>
+  <p id="primeMessage"></p>
+
+  <div id="generatorSection">
+    <label for="generator">Enter Generator (g):</label>
+    <input type="number" id="generator" placeholder="Enter generator" />
+    <button onclick="checkGenerator()">Check</button>
+    <p id="generatorMessage"></p>
+  </div>
+
+  <div id="usersSection">
+    <div class="box">
+      <h3>Alice</h3>
+      <label for="alicePrivate">Private Key:</label>
+      <input type="number" id="alicePrivate" placeholder="Enter Alice's key" />
+      <button onclick="computePublicKey('alice')">Compute Public Key</button>
+      <p id="alicePublic"></p>
+    </div>
+    <div class="box">
+      <h3>Bob</h3>
+      <label for="bobPrivate">Private Key:</label>
+      <input type="number" id="bobPrivate" placeholder="Enter Bob's key" />
+      <button onclick="computePublicKey('bob')">Compute Public Key</button>
+      <p id="bobPublic"></p>
+    </div>
+  </div>
+
+  <div id="sharePublicKeySection">
+    <button onclick="sharePublicKeys()">Exchange Public Key</button>
+    <div id="sharedPublicKeysSection">
+      <div class="box">
+        <h3>Alice's View</h3>
+        <p>Bob's Public Key: <span id="bobPublicOnAlice"></span></p>
+      </div>
+      <div class="box">
+        <h3>Bob's View</h3>
+        <p>Alice's Public Key: <span id="alicePublicOnBob"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="shareKeySection">
+    <button onclick="computeSecretKey()">Share Secret Key</button>
+    <div id="sharedSecretKeysSection">
+      <div class="box">
+        <h3>Alice's View</h3>
+        <p>Shared Secret Key: <span id="aliceSharedKey"></span></p>
+      </div>
+      <div class="box">
+        <h3>Bob's View</h3>
+        <p>Shared Secret Key: <span id="bobSharedKey"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
